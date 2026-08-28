@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 30% 96%;
+    --foreground: 220 25% 12%;
+    --card: 210 25% 98%;
+    --card-foreground: 220 25% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 12%;
+    --primary: 210 60% 45%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 35 45% 90%;
+    --secondary-foreground: 35 50% 25%;
+    --muted: 210 20% 92%;
+    --muted-foreground: 215 15% 50%;
+    --accent: 35 65% 55%;
+    --accent-foreground: 35 80% 15%;
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 210 20% 88%;
+    --input: 210 20% 88%;
+    --ring: 210 60% 45%;
+    --radius: 0.75rem;
+
+    --harbor-ocean: 210 60% 45%;
+    --harbor-ocean-deep: 215 65% 30%;
+    --harbor-sky: 200 55% 85%;
+    --harbor-sand: 35 45% 80%;
+    --harbor-sand-light: 38 50% 93%;
+    --harbor-gold: 40 80% 55%;
+    --harbor-warmth: 20 60% 50%;
+    --harbor-driftwood: 25 20% 40%;
+    --harbor-seafoam: 165 40% 75%;
+    --harbor-sunset: 15 75% 60%;
+    --harbor-mist: 210 25% 95%;
+
+    --os-titlebar: 220 15% 92%;
+    --os-titlebar-active: 220 15% 88%;
+    --os-window-bg: 0 0% 100%;
+    --os-dock: 220 20% 18%;
+    --os-dock-foreground: 210 30% 96%;
+
+    --editor-bg: 220 18% 13%;
+    --editor-fg: 210 25% 85%;
+    --editor-line: 220 15% 18%;
+    --editor-gutter: 220 10% 35%;
+    --editor-keyword: 210 80% 65%;
+    --editor-tag: 35 75% 60%;
+    --editor-attribute: 165 50% 55%;
+    --editor-string: 25 70% 60%;
+    --editor-comment: 220 10% 45%;
+    --editor-cursor: 35 80% 55%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222 30% 8%;
+    --foreground: 210 30% 92%;
+    --card: 222 25% 12%;
+    --card-foreground: 210 30% 92%;
+    --popover: 222 25% 12%;
+    --popover-foreground: 210 30% 92%;
+    --primary: 210 55% 55%;
+    --primary-foreground: 222 30% 8%;
+    --secondary: 217 25% 20%;
+    --secondary-foreground: 210 30% 92%;
+    --muted: 217 25% 20%;
+    --muted-foreground: 215 20% 60%;
+    --accent: 35 55% 45%;
+    --accent-foreground: 210 30% 92%;
+    --destructive: 0 62% 35%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 25% 22%;
+    --input: 217 25% 22%;
+    --ring: 212 26% 80%;
+    --os-titlebar: 220 20% 14%;
+    --os-titlebar-active: 220 20% 16%;
+    --os-window-bg: 222 25% 10%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  /* Neon theme */
+  .theme-neon {
+    --primary: 180 100% 50%;
+    --primary-foreground: 180 100% 5%;
+    --accent: 300 80% 55%;
+    --harbor-gold: 50 100% 55%;
+    --border: 260 30% 25%;
+    --os-dock: 260 40% 8%;
+    --editor-keyword: 180 100% 60%;
+    --editor-tag: 300 80% 60%;
+    --editor-string: 120 80% 50%;
+  }
+
+  /* Frost theme */
+  .theme-frost {
+    --background: 210 40% 96%;
+    --card: 210 30% 98%;
+    --border: 210 30% 85%;
+    --primary: 200 70% 50%;
+    --os-titlebar: 210 25% 94%;
+    --os-titlebar-active: 210 25% 90%;
+  }
+
+  /* Night Shift theme */
+  .theme-nightshift {
+    --background: 30 20% 10%;
+    --foreground: 35 30% 85%;
+    --card: 30 18% 14%;
+    --card-foreground: 35 30% 85%;
+    --border: 30 15% 22%;
+    --primary: 35 60% 50%;
+    --primary-foreground: 30 20% 8%;
+    --muted: 30 15% 18%;
+    --muted-foreground: 35 15% 55%;
+    --os-titlebar: 30 15% 14%;
+    --os-titlebar-active: 30 15% 18%;
+    --os-window-bg: 30 18% 11%;
+    --os-dock: 30 15% 8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* Harbor OS styles */
+.harbor-glass {
+  background: hsla(var(--background) / 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.dark .harbor-glass {
+  background: hsla(var(--background) / 0.9);
+}
+
+.theme-frost .harbor-glass {
+  background: hsla(var(--background) / 0.6);
+  backdrop-filter: blur(30px);
+}
+
+.harbor-dock-glass {
+  background: hsla(var(--os-dock) / 0.82);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+}
+
+/* Syntax highlighting */
+.syntax-tag { color: hsl(var(--editor-tag)); }
+.syntax-attribute { color: hsl(var(--editor-attribute)); }
+.syntax-string { color: hsl(var(--editor-string)); }
+.syntax-comment { color: hsl(var(--editor-comment)); font-style: italic; }
+.syntax-keyword { color: hsl(var(--editor-keyword)); }
+.syntax-text { color: hsl(var(--editor-fg)); }
+
+/* Scrollbar */
+.harbor-scrollbar::-webkit-scrollbar { width: 5px; height: 5px; }
+.harbor-scrollbar::-webkit-scrollbar-track { background: transparent; }
+.harbor-scrollbar::-webkit-scrollbar-thumb { background: hsl(var(--muted-foreground) / 0.2); border-radius: 3px; }
+.harbor-scrollbar::-webkit-scrollbar-thumb:hover { background: hsl(var(--muted-foreground) / 0.4); }
+
+/* Subtle animations */
+@keyframes building-glow {
+  0%, 100% { filter: drop-shadow(0 0 6px hsl(var(--harbor-gold) / 0.2)); }
+  50% { filter: drop-shadow(0 0 12px hsl(var(--harbor-gold) / 0.4)); }
+}
+
+@keyframes wave {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+}
+
+@keyframes cloud-drift {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(calc(100vw + 100%)); }
+}
+
+.building-glow { animation: building-glow 3s ease-in-out infinite; }
+.wave-animation { animation: wave 4s ease-in-out infinite; }
+
+/* Override visual effects */
+.slowmo-mode * { transition-duration: 2s !important; animation-duration: 4s !important; }
+.chaos-mode { animation: chaos-wobble 5s ease-in-out infinite; }
+@keyframes chaos-wobble {
+  0%, 100% { filter: hue-rotate(0deg); }
+  25% { filter: hue-rotate(10deg); }
+  50% { filter: hue-rotate(-5deg); }
+  75% { filter: hue-rotate(8deg); }
+}
+.ghost-mode::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 50% 50%, transparent 60%, hsla(210, 30%, 40%, 0.05) 100%);
+  z-index: 99998;
+}
+.drift-mode { animation: drift-sway 8s ease-in-out infinite; }
+@keyframes drift-sway {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(2px); }
+}
+
+/* Focus mode */
+.focus-line {
+  background: hsla(var(--harbor-gold) / 0.08);
+}
